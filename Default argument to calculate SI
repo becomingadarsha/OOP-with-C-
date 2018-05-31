@@ -1,3 +1,5 @@
+//Use default argument concept to calculate SI (R=15%)
+
 #include<iostream>
 using namespace std;
 inline float si(int p, int t, float r=15)
