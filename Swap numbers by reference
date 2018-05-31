@@ -10,13 +10,13 @@ int swap(int &x, int &y)
 	temp=x;
 	x=y;
 	y=temp;
-	
 }
 int main()
 {
 	int x,y;
 	cout<<"Value of a and b ?";
 	cin>>x>>y;
-	swap(x,y);
-	cout<<"After swapping value is"<<x<<endl<<y;
+	cout<<"Before swapping the values of a and b are "<<x<< " and "<<y<<endl;
+    swap(x,y);
+	cout<<"After swapping value are "<<x<<" and "<<y;
 }
