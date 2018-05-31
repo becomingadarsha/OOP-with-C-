@@ -1,5 +1,4 @@
-//WAP to swap two numbers using function (pass by reference)
-
+//Use inline function to calculate SI
 #include<iostream>
 using namespace std;
 inline float si(int p, int t, float r)
