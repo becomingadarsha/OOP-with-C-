@@ -1,43 +1,45 @@
 #include<iostream>
-using namespace std;
 class time
 	{
-		int hours,minutes,seconds,hours1,minutes1,seconds1;
+		int hours,minutes,seconds,hrs1,mins1,secs1,hrs2,mins2,secs2;
 		public:
 			void set_time(int hrs,int mins,int secs)
 			{
 				hours=hrs;
 				minutes=mins;
 				seconds=secs;
-				
+
 			}
 			void get_time()
 			{
-				cout<<"Enter time in hour,minutes and seconds : ";
-				cin>>hours>>minutes>>seconds;
+				std::cout<<"**First Time** :"<<std::endl<<"Enter first time in hour,minutes and seconds : ";
+				std::cin>>hrs1>>mins1>>secs1;
 			}
 			void next_time()
 			{
-				int hrs1,mins1,secs1;
-				cout<<"Enter next time :"<<endl;
-				cout<<"Enter next time in hour, minutes and seconds";
-				cin>>hrs1>>mins1>>secs1;
-				hours1=hrs1+hours;
-				minutes1=mins1+minutes;
-				seconds1=secs1+seconds;
-			}	
-			
+				std::cout<<std::endl<<"**Next Time** :"<<std::endl;
+				std::cout<<"Enter next time in hour, minutes and seconds";
+				std::cin>>hrs2>>mins2>>secs2;
+
+			}
+
 			void show_time()
 			{
-				cout<<"The time is "<<hours<<"hrs "<<minutes<<"mins "<<seconds <<"secs "<<endl
-			<< "The added time is"<<hours1<<"hrs "<<minutes1<<"mins "<<seconds1<<"secs ";
+                seconds=secs1+secs2;
+                minutes=mins1+mins2+(seconds/60);
+                hours=hrs1+hrs2+(minutes/60);
+                minutes=minutes%60;
+                seconds=seconds%60;
+				std::cout<<"The time is "<<hrs1<<"hrs "<<mins1<<"mins "<<secs1<<"secs "<<std::endl
+                << "The time after adding time is "<<hours<<"hrs "<<minutes<<"mins "<<seconds<<"secs ";
 			}
 		};
+
 int main()
 {
-	time t;
-	t.get_time();
+
+	class time t;
+    t.get_time();
 	t.next_time();
 	t.show_time();
 }
-	
