@@ -1,0 +1,46 @@
+//Create a class named time with data members hours, numbers and second. Use member function settime() to set time, gettime() to read time from user , add_time() to add two time and showtime() to display time in HH::MM::SS format.
+#include<iostream>
+class time
+	{
+		int hours,minutes,seconds,hrs1,mins1,secs1,hrs2,mins2,secs2;
+		public:
+			void set_time(int hrs,int mins,int secs)
+			{
+				hours=hrs;
+				minutes=mins;
+				seconds=secs;
+
+			}
+			void get_time()
+			{
+				std::cout<<"**First Time** :"<<std::endl<<"Enter first time in hour,minutes and seconds : ";
+				std::cin>>hrs1>>mins1>>secs1;
+			}
+			void next_time()
+			{
+				std::cout<<std::endl<<"**Next Time** :"<<std::endl;
+				std::cout<<"Enter next time in hour, minutes and seconds";
+				std::cin>>hrs2>>mins2>>secs2;
+
+			}
+
+			void show_time()
+			{
+                seconds=secs1+secs2;
+                minutes=mins1+mins2+(seconds/60);
+                hours=hrs1+hrs2+(minutes/60);
+                minutes=minutes%60;
+                seconds=seconds%60;
+				std::cout<<"The time is "<<hrs1<<"hrs "<<mins1<<"mins "<<secs1<<"secs "<<std::endl
+                << "The time after adding time is "<<hours<<"hrs "<<minutes<<"mins "<<seconds<<"secs ";
+			}
+		};
+
+int main()
+{
+
+	class time t;
+    t.get_time();
+	t.next_time();
+	t.show_time();
+}
