@@ -1,3 +1,7 @@
+/*  Define a class Amount with data member rupees and paisa 
+Member function: - to read data member, - to display amount in appropriate format , - to add two amounts
+*/
+
 #include<iostream>
 using namespace std;
 class Amount
