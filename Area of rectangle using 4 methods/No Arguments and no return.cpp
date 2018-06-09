@@ -1,3 +1,4 @@
+//No arguments and noreturn value
 #include<iostream>
 using namespace std;
 class rectangle
@@ -5,17 +6,17 @@ class rectangle
 private:
 int l, b,ar,peri;
 public:
-void input();
+void input(); //void as no return value
 void perimeter();
 void area();
 };
-void rectangle::input()
+void rectangle::input() //takes input
 {
 cout<<"Enter length of rectangle ";cin>>l;
 cout<<"Enter breadth of rectangle "; cin>>b;
 
 }
-void rectangle::perimeter()
+void rectangle::perimeter() //calculate
 {
 peri=2*(l+b);
 cout<<"Perimeter is "<<peri<<endl;
@@ -29,9 +30,7 @@ cout<<"Area is "<<ar;
 int main()
 {
 rectangle rect;
-rect.input();
+rect.input(); //calling functions one by one
 rect.perimeter();
 rect.area();
-
-
 }
