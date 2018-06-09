@@ -1,10 +1,10 @@
 /*Define a class distance with data members a) feet in int and b) inches in float
-Member functions: - to read data member, to display distance in format feet- inches , 
+Member functions: - to read data member, to display distance in format feet- inches ,
 to add two distance object and returning distance object
 */
 #include<iostream>
 using namespace std;
-class distance
+class Distance
 {
 private:
 int feet;
@@ -13,20 +13,20 @@ float inch;
 public:
 void read();
 void display();
-void add(distance a, distance b);
+void add(Distance a, Distance b);
 };
 
-void distance::read()
+void Distance::read()
 {
 cout<<"Enter distance in feet: "; cin>>feet;
 cout<<"Enter distance in inch: "; cin>>inch;
 }
 
-void distance::display()
+void Distance::display()
 {
 cout<<feet<<"ft. "<<inch<<"inches \n";
 }
-void distance::add(distance a, distance b)
+void Distance::add(Distance a, Distance b)
 {
 feet=a.feet+b.feet;
 inch=a.inch+b.inch;
@@ -40,7 +40,7 @@ inch=(int)inch%12;
 
 int main()
 {
-class distance d1,d2,d3;
+class Distance d1,d2,d3;
 cout<<"First distance : \n";
 d1.read();
 cout<<"Second distance : \n";
