@@ -1,25 +1,27 @@
+//No arguments but return type
 #include<iostream>
 using namespace std;
 class rectangle
 {
 private:
-int l, b,ar,peri;
+int l,b,ar,peri;
 public:
-void input();
-int perimeter();
-int area();
+void input(); //since no return value so void
+int perimeter(); //return value so int
+int area(); //return value so int
 };
 void rectangle::input()
 {
 cout<<"Enter length of rectangle ";cin>>l;
 cout<<"Enter breadth of rectangle "; cin>>b;
-
 }
+
 int rectangle::perimeter()
 {
 peri=2*(l+b);
 return(peri);
 }
+
 int rectangle::area()
 {
 ar=l*b;
