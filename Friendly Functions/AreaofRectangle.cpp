@@ -1,3 +1,5 @@
+//May look simple but you have no idea how I was happy making first friend function
+
 #include<iostream>
 using namespace std;
 class area
