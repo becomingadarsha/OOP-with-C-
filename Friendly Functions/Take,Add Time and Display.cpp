@@ -1,3 +1,12 @@
+/*Define a class distance with data members
+-feet in int
+- inches in flat
+Member functions:
+- to read data member
+Also two friendly functions:
+- to display distance in format feet-inches
+- to add two distance object and returning distance object
+*/
 #include<iostream>
 using namespace std;
 class Distance
