@@ -29,15 +29,7 @@ Interest() //constructor created
 
 }
 Interest(int,float,float);
-void getdata()
-{
-	cout<<"Enter principle:";
-	cin>>principle;
-	cout<<"Enter rate:";
-	cin>>rate;
-	cout<<"Enter time:";
-	cin>>time;
-}
+void getdata();
 void Calc();
 void Display();
 ~Interest()
@@ -54,6 +46,16 @@ time=t;
 rate=r;
 }
 
+void Interest::getdata()
+{
+	cout<<"Enter principle:";
+	cin>>principle;
+	cout<<"Enter rate:";
+	cin>>rate;
+	cout<<"Enter time:";
+	cin>>time;
+}
+
 void Interest:: Calc()
 {
 interest=((principle*rate*time)/100);
@@ -68,9 +70,12 @@ cout<<"Principle: "<<principle<<endl<<"Time: "<<time<<endl<<"Rate: "<<rate<<endl
 
 int main()
 {
-Interest I1(0,0,0);
-I1.getdata();
+Interest I1(2000,10,1); //doing nthng only doing default arguments as per ques
 I1.Calc();
 I1.Display();
+Interest I2; //next object as per ques
+I2.getdata();
+I2.Calc();
+I2.Display();
 return 0;
 }
