@@ -9,7 +9,8 @@ using namespace std;
 class Distance
 {
 private:
-int feet, inch;
+int feet;
+float inch;
 public:
 Distance();
 Distance(int f, int in);
@@ -36,8 +37,11 @@ Distance operator +(Distance a, Distance b)
 Distance c;
 c.feet=a.feet+b.feet;
 c.inch=a.inch+b.inch;
-c.feet=a.feet+(b.inch/12);
-c.inch=a.inch%12;
+if(c.inch>=12.0)
+{
+c.feet=a.feet+b.feet+(c.inch/12.0);
+c.inch=(int)c.inch%12;
+}
 return c;
 }
 
