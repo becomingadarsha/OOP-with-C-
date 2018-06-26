@@ -49,7 +49,7 @@ cout<<"Enter second string: "; cin>>str1;
 void String::Count()
 {
 cout<<"Length of first string is: "<<strlen(str)<<endl;
-cout<<"Length of first string is: "<<strlen(str1)<<endl;
+cout<<"Length of second string is: "<<strlen(str1)<<endl;
 }
 
 void String::Concat()
