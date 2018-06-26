@@ -27,7 +27,6 @@ String() //initializing constructor
 	str[20]=0;
 	str1[20]=0;
 }
-String(char n[],char m[]);
 void getdata();
 void Rev();
 void Copy();
@@ -42,11 +41,10 @@ cout<<"\n\nFreed up memory using destructor....";
 
 void String::getdata()
 {
-{
 cout<<"Enter first string: "; cin>> str;
 cout<<"Enter second string: "; cin>>str1;
 }
-}
+
 
 void String::Count()
 {
