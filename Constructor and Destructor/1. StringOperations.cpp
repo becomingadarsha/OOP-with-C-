@@ -65,8 +65,11 @@ cout<<"After copying first string: "<<str1;
 
 void String::Rev()
 {
-cout<<"First reverse: "<<strrev(str)<<endl;
-cout<<"Second reverse: "<<strrev(str1)<<endl;
+	char m[20],n[20];
+	strcpy(m,str);
+	strcpy(n,str1);
+	cout<<"First reverse: "<<strrev(m)<<endl;
+	cout<<"Second reverse: "<<strrev(n)<<endl;
 }
 
 int main()
@@ -77,5 +80,5 @@ s1.Count();
 s1.Rev();
 s1.Concat();
 s1.Copy();
-}
 
+}
