@@ -6,7 +6,7 @@ using namespace std;
 
 class String
 {
-        public:
+        private:
                 char str[20];
         public:
                 void accept_string()
